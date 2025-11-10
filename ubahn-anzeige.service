@@ -1,0 +1,18 @@
+[Unit]
+Description=U-Bahn Anzeige für Raspberry Pi
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/ubahn
+Environment="NODE_ENV=production"
+ExecStart=/usr/bin/sudo /usr/bin/node /home/pi/ubahn/ubahn_anzeige.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ubahn-anzeige
+
+[Install]
+WantedBy=multi-user.target

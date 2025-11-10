@@ -1,0 +1,28 @@
+{
+  "name": "ubahn-anzeige",
+  "version": "1.0.0",
+  "description": "Berliner U-Bahn Bahnsteig Anzeige für Raspberry Pi mit TFT Display",
+  "main": "ubahn_anzeige.js",
+  "scripts": {
+    "start": "node ubahn_anzeige.js",
+    "dev": "node ubahn_anzeige.js",
+    "install-service": "sudo cp ubahn-anzeige.service /etc/systemd/system/ && sudo systemctl daemon-reload && sudo systemctl enable ubahn-anzeige"
+  },
+  "keywords": [
+    "ubahn",
+    "berlin",
+    "vbb",
+    "raspberry-pi",
+    "display"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "canvas": "^2.11.2",
+    "onoff": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

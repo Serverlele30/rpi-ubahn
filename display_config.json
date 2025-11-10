@@ -1,0 +1,6 @@
+{
+  "device": "/dev/fb0",
+  "format": "BGRA8888",
+  "width": 480,
+  "height": 360
+}
